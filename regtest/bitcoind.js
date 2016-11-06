@@ -7,7 +7,7 @@ var index = require('..');
 var log = index.log;
 
 var chai = require('chai');
-var bitcore = require('bitcore-lib-dwcash');
+var bitcore = require('bitcore-lib-zclassic');
 var BN = bitcore.crypto.BN;
 var async = require('async');
 var rimraf = require('rimraf');
@@ -46,7 +46,7 @@ describe('Zcashd Functionality', function() {
       bitcoind = require('../').services.Bitcoin({
         spawn: {
           datadir: datadir,
-          exec: path.resolve(__dirname, '../bin/dwcashd')
+          exec: path.resolve(__dirname, '../bin/zcashd')
         },
         node: {
           network: regtestNetwork,
